@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                /* Animations for page transitions */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+    </style>
+</head>
+<body>
+    <script>
+        // Function to trigger page transition animation
+        function animateTransition(event, targetUrl) {
+            event.preventDefault(); // Prevent the default link action
+    
+            // Add the 'fade-out' class to the container to trigger the animation
+            document.querySelector('.container').classList.add('fade-out');
+    
+            // Wait for the animation to finish, then redirect to the target URL
+            setTimeout(function() {
+                window.location.href = targetUrl;
+            }, 500); // Wait for the duration of the animation (0.5 seconds)
+        }
+    
+        // Attach the function to the sign-up and login links
+        document.querySelector('.login a').addEventListener('click', function(event) {
+            animateTransition(event, 'signuppage.html'); // Change to the correct sign-up URL
+        });
+    
+        document.querySelector('.new-user a').addEventListener('click', function(event) {
+            animateTransition(event, 'loginpage.html'); // Change to the correct login URL
+        });
+    
+        // Add the 'fade-in' class on page load to create a smooth entry effect
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.container').classList.add('fade-in');
+        });
+    </script>
+    .buttom img:hover{
+        transform: scale(1.2); /* Scale the image to 110% on hover */
+        /* filter: brightness(1.2);  */
+    }
+
+
+
+</body>
+</html>

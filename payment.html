@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.navbar {
+  height: 60px;
+  background-color: #FFD335;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  /* z-index: 1000; */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin-right: 40px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
+.profile-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.left-section {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+}
+
+.header h2 {
+    position: absolute;
+  font-size: 22px;
+  color: #020202;
+  left: 100px;
+  top: 100px;
+}
+
+.header h2 a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.header h2 a:hover{
+    color: #FFD335;
+}
+
+.confirmation-section {
+  max-width: 500px;
+}
+
+.checkmark {
+  font-size: 72px;
+  color: #FFD335;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.order-number {
+  color: #FFD335;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.confirmation-message {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.back-to-shopping {
+  background-color: #FFD335;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.back-to-shopping:hover {
+  background-color: #f1b500;
+}
+
+.print-receipt {
+  color: #FFD335;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  margin-left: 205px;
+}
+
+.print-receipt:hover {
+  text-decoration: underline;
+}
+
+
+.right-section {
+  width: 50%;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+h3 {
+  font-size: 34px;
+  color: #444;
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+
+
+
+
+/* Add spacing between the checkboxes and the text */
+input[type="checkbox"] + label {
+  margin-left: 5px;
+}
+
+.product-summary img{
+  border-radius: 10px;
+}
+
+.coupon input{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.coupon select {
+  width: 33%;
+}
+
+.add-code-button{
+  background-color: #f4c210;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.add-code-button:hover {
+  background-color: #f1b500;
+}
+
+.shipping{
+  width: 65%;
+  display: flex;
+  margin-top: 20px;
+  /* justify-content: space-between; */
+  padding: 35px 0; /* Add padding above and below the text */
+  border-top: 1px solid #252525; /* Top border */
+  border-bottom: 1px solid #252525; /* Bottom border */
+  color: #555; /* Text color */
+  font-size: 16px;
+}
+
+.shipping p{
+  margin-left: 300px;
+}
+
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+          <img src="swapspot.png" alt="Logo" class="logo">
+        </div>
+        <div class="navbar-right">
+          <a href="homepage.html" class="nav-link">Home</a>
+          <a href="./Project/item_listing.html" class="nav-link">Explore</a>
+          <a href="#" class="nav-link">Cart</a>
+          <img src="./profile/images.png" alt="Profile" class="profile-icon">
+        </div>
+    </nav>
+
+    <div class="container">
+    <!-- Left section for contact and pickup details -->
+    <div class="left-section">
+        <!-- Payment confirmation message -->
+        <div class="header">
+            <h2><a href="shippingdetails.html">Details</a> > <a href="shippingdetails1.html">shipping</a> > <a href="#">Payment</a></h2>
+        </div>
+        <div class="confirmation-section">
+          <div class="checkmark">
+            &#10004;
+          </div>
+          <h1>Payment Confirmed</h1>
+          <p class="order-number">ORDER #2039</p>
+          <p class="confirmation-message">Thank you Joe for buying Candleaf. The nature is grateful to you. Now that your order is confirmed it will be ready to ship in 2 days. Please check your inbox in the future for your order updates.</p>
+          <a href="./Project/item_listing.html">
+          <button class="back-to-shopping">Back to shopping</button>
+        </a>
+          <a href="#" class="print-receipt">Print receipt</a>
+        </div>
+      </div>
+      
+
+    <!-- Right section for order summary (not modified) -->
+    <div class="right-section">
+      <h3>Smartphone®</h3>
+      <div class="product-summary">
+        <img src="smartphone.jpg" alt="Smartphone Image">
+      </div>
+      
+      <div class="coupon">
+        <input type="text" placeholder="Coupon code">
+        <button class="add-code-button">Add code</button>
+      </div>
+      
+      <div class="shipping">
+        <h4>Shipping</h4>
+        <p>100</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

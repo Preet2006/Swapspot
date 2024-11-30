@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designers Community</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #fff;
+    padding: 20px 0;
+    
+    /* height: 100%; */
+    display: flex;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    height: 2000px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure content stays at the top */
+    align-items: center; /* Center horizontally */
+    width: 100%;
+    position: fixed;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+    width: 220px; /* Ensure the clickable area stretches the width */
+    text-align: center; /* Ensure text stays centered */
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+    width: 100%; /* Make the clickable area full width */
+    padding: 10px 0; /* Add some padding to the links */
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ffdd00; /* Yellow background on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.breadcrumbs {
+    margin-left: 15px;
+    color: #1f1f1f;
+    font-size: 14px;
+
+    background-image: url('5235.jpg');
+    background-size: cover; /* Adjust this to "contain" or "cover" based on your needs */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    border-radius: 8px; /* Adds some roundness to the breadcrumb container */
+    color: white; /* Adjust text color for contrast */
+    height: 500px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-top: 20px;
+    color: #000000;
+}
+
+h2{
+    text-decoration: underline;
+    margin-left: 15px;
+    font-size: 28px;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.live-section {
+    background-color: #f9fbfc;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #e5eaf0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    margin-left: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.live-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.live-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.live-info strong {
+    color: #000;
+    font-size: 16px;
+}
+
+.live-info p {
+    color: #797979;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.join-btn {
+    background-color: #ffdd00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.join-btn:hover {
+    background-color: #f0c900;
+}
+
+
+.post-section {
+    margin-right: 10%;
+    margin-left: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-image img {
+    width: 100%;
+    height: 700px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.post-content {
+    margin-top: 10px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-info h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.post-info .post-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.post-text {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.post-actions {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.post-actions span {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.comment-section {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment {
+            margin-left: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .comment .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .comment .comment-text {
+            margin-left: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .comment .comment-time {
+            font-size: 12px;
+            color: #999;
+            margin-left: 10px;
+        }
+
+        .comment-form {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .comment-form input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .comment-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul>
+                <li class="home active"><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Favorite</a></li>
+                <li><a href="#">Message</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header>
+                <div class="breadcrumbs">
+                    <h1>Communities / Designers</h1>
+                </div>
+                <h2>Designers</h2>
+            </header>
+
+            <!-- Live Section -->
+            <section class="live-section">
+                <div class="live-content">
+                    <div class="live-info">
+                        <strong>Live on Designers</strong>
+                        <p>Join the conversation</p>
+                    </div>
+                    <button class="join-btn">Join</button>
+                </div>
+            </section>
+            
+
+            <!-- Post Section -->
+            <section class="post-section" id="post-section">
+                <!-- Content will be added here dynamically -->
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Sample JSON data
+        const data = {
+            "post": {
+                "image": "./img/communityimage.jpg",
+                "content": {
+                    "author": {
+                        "name": "Jane Smith",
+                        "profilePic": "./img/profile1.webp"
+                    },
+                    "time": "20 minutes ago",
+                    "text": "Hey everyone, I'm loving SwapSpot! I just completed my first swap—traded an old camera for some gardening tools. Has anyone tried trading skills here? I'm curious about how that works.",
+                    "likes": 22,
+                    "commentsCount": 3
+                }
+            },
+            "comments": [
+                {
+                    "author": {
+                        "name": "David Johnson",
+                        "profilePic": "./img/profile2.jpg"
+                    },
+                    "time": "2h",
+                    "text": "That's awesome, Jane! I've done a few skill trades. I'm a web developer, and I swapped my services to get some graphic design work done for my business logo. The process is super smooth."
+                },
+                {
+                    "author": {
+                        "name": "Sara Davis",
+                        "profilePic": "./img/profile3.webp"
+                    },
+                    "time": "1h",
+                    "text": "That sounds really cool! I'm a graphic designer, so I might give that a try. I saw the SwapCredit system—how does that work exactly?"
+                }
+            ]
+        };
+
+        // Function to populate the post section
+        function loadContent() {
+            const postSection = document.getElementById('post-section');
+            
+            // Create post content
+            const postHTML = `
+                <div class="post">
+                    <div class="post-image">
+                        <img src="${data.post.image}" alt="Post Image">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-header">
+                            <img src="${data.post.content.author.profilePic}" alt="${data.post.content.author.name}" class="profile-pic">
+                            <div class="post-info">
+                                <h3>${data.post.content.author.name}</h3>
+                                <span class="post-time">${data.post.content.time}</span>
+                            </div>
+                        </div>
+                        <p class="post-text">${data.post.content.text}</p>
+                        <div class="post-actions">
+                            <span>${data.post.content.likes}</span> <i class="like-icon"></i>
+                            <span>${data.post.content.commentsCount}</span> <i class="comment-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <h1>Comments</h1>
+                    ${data.comments.map(comment => `
+                        <div class="comment">
+                            <img src="${comment.author.profilePic}" alt="${comment.author.name}" class="profile-pic">
+                            <div class="comment-text">
+                                <p><strong>${comment.author.name}</strong> <span class="comment-time">${comment.time}</span></p>
+                                <p>${comment.text}</p>
+                            </div>
+                        </div>
+                    `).join('')}
+                    <form class="comment-form">
+                        <input type="text" placeholder="Add a comment" />
+                        <button type="submit">Post</button>
+                    </form>
+                </div>
+            `;
+
+            // Insert post content into the section
+            postSection.innerHTML = postHTML;
+        }
+
+        // Load the content when the page is loaded
+        window.onload = loadContent;
+    </script>
+</body>
+</html>

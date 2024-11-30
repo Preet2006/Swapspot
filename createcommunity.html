@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F9FAFC;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-right: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    font-size: 18px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar ul li a:hover{
+    transform: scale(1.9);
+}
+
+.navbar-icons a {
+    margin-left: 20px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+main {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+    padding: 30px 14%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    min-height: calc(100vh - 100px)
+}
+
+h1 {
+    margin-top: 25px;
+    font-size: 38px;
+    color: #1D1D1F;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #6C757D;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    font-size: 20px;
+    color: #1D1D1F;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 50%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    background-color: #F9FAFC;
+    outline: none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #B0B0B0;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.category-group {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.category-group label {
+    font-size: 20px;
+    color: #1D1D1F;
+    display: block;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.category-group input,
+.category-group textarea {
+    width: 90%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    background-color: #F9FAFC;
+    outline: none;
+}
+
+.category-group input::placeholder,
+.category-group textarea::placeholder {
+    color: #B0B0B0;
+}
+
+.category-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.privacy-options {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.privacy-btn {
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    color: #1D1D1F;
+}
+
+.privacy-btn:hover {
+    background-color: #b9b9b9;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 10%;
+}
+
+.cancel-btn {
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.create-btn {
+    background-color: #FDD835;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #1D1D1F;
+}
+
+.create-btn:hover {
+    background-color: #FBC02D;
+}
+
+.cancel-btn:hover {
+    background-color: #b9b9b9;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="swapspot.png" alt="Swapspot Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="group.html">Communities</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-icons">
+                <a href="#"><img src="chat.png" alt="Messages"></a>
+                <a href="#"><img src="help_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Help"></a>
+                <a href="./profile/index2.html"><img src="profile.png" alt="Profile" class="profile-pic"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Create a community</h1>
+            <p>Communities are places where people can come together to share their interests, express their opinions, and find swaps</p>
+
+            <form action="">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter a name for your community">
+                </div>
+
+                <div class="input-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Enter a description"></textarea>
+                </div>
+
+                <div class="privacy-options">
+                    <button type="button" class="privacy-btn">Public</button>
+                    <button type="button" class="privacy-btn">Private</button>
+                </div>
+
+                <div class="category-group">
+                    <label for="category">Choose a category</label>
+                    <div></div>
+                    <input type="text" id="category" placeholder="Search categories">
+                </div>
+
+                <div class="actions">
+                    <a href="homepage.html">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                </a>
+                <a href="group.html">
+                    <button type="submit" class="create-btn">Create community</button>
+                </a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groups</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+}
+
+.sidebar-buttons {
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.join-btn {
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 200px; 
+}
+
+.create-btn {
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 200px; 
+}
+
+.join-btn:hover {
+  background-color: #ffbb00; 
+  color: rgb(255, 255, 255);
+}
+
+.create-btn:hover {
+  background-color: #ffbb00; 
+  color: rgb(255, 255, 255);
+}
+
+
+ul {
+  width: 100%;
+  list-style-type: none;
+  margin-top: 20px; 
+  text-align: center; 
+}
+
+ul li {
+  margin-bottom: 15px;
+}
+
+ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  display: block;
+  width: 100%; 
+  padding: 10px 0; 
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul li a i {
+  margin-right: 10px; /* Space between the icon and the text */
+  font-size: 20px;
+  color: #333; /* Icon color */
+}
+
+ul li a:hover i {
+  color: #FFD335; /* Change icon color on hover */
+}
+
+ul li a:hover {
+  color: #FFD335; 
+  /* color: white;  */
+  transform: translateX(5px);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.groups-header {
+  display: flex;
+  flex-direction: column; 
+  margin-bottom: 20px;
+}
+
+.groups-header h1 {
+  background-image: url('./img/groupbackground.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border-radius: 8px;
+  font-size: 48px; 
+  margin-bottom: 20px;
+  color: white; 
+  height: 250px;
+  width: 90%;
+
+  display: flex; 
+  justify-content: left; 
+  align-items: flex-end;
+  padding-bottom: 20px;
+  padding-left: 10px; 
+}
+
+.groups-header input {
+  width: 80%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f0f0f5;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  margin-top: 30px;
+}
+
+.filter-buttons button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #f0f0f5; 
+  cursor: pointer;
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #ffdd00; 
+  color: white; 
+}
+
+.groups-section {
+  margin-top: 30px;
+  width: 90%;
+}
+
+.groups-section h2 {
+  margin-bottom: 30px;
+}
+
+.group-list {
+    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.group-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fd;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.group-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.group-info {
+  display: flex;
+  flex-direction: column; 
+  flex-grow: 1;
+}
+
+.group-card p {
+  margin-bottom: 5px; 
+}
+
+.join-btn {
+  padding: 8px 12px;
+  background-color: #f0f0f5;
+  border: none;
+  cursor: pointer;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+        <div class="sidebar-buttons">
+            <a href="community1.html">
+            <button class="join-btn">Join Group</button>
+        </a>
+            <a href="createcommunity.html">
+            <button class="create-btn">Create Group</button>
+        </a>
+        </div>          
+        <ul>
+            <li><a href="homepage.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="./Project/item_listing.html"><i class="fas fa-compass"></i> Explore</a></li>
+            <li><a href="createcommunity.html"><i class="fas fa-plus"></i> Create</a></li>
+            <li><a href="./message/index1.html"><i class="fas fa-comment-alt"></i> Messages</a></li>
+            <li><a href="#"><i class="fas fa-bars"></i> List</a></li>
+            <li><a href="./profile/index2.html"><i class="fas fa-user"></i> Profile</a></li>
+          </ul>          
+    </nav>
+    <div class="main-content">
+        <div class="groups-header">
+            <h1>Groups</h1>
+            <input type="text" placeholder="Search groups">
+            <div class="filter-buttons">
+              <button>Technology</button>
+              <button>Business</button>
+              <button>Design</button>
+            </div>
+        </div>
+      <div class="groups-section">
+        <h2>Featured Groups</h2>
+        <div class="group-list">
+          <div class="group-card">
+            <img src="./img/group1.jpg" alt="Product Design">
+            <div class="group-info">
+            <p>Product Design</p>
+            <span>120 members, 20 online</span>
+            </div>
+            <button class="join-btn">Join</button>
+          </div>
+          <div class="group-card">
+            <img src="./img/group2.webp" alt="Web Development">
+            <div class="group-info">
+            <p>Web Development</p>
+            <span>1000 members, 100 online</span>
+            </div>
+            <button class="join-btn">Join</button>
+          </div>
+          <div class="group-card">
+            <img src="./img/group3.webp" alt="UX Research">
+            <div class="group-info">
+            <p>UX Research</p>
+            <span>230 members, 30 online</span>
+            </div>
+            <button class="join-btn">Join</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

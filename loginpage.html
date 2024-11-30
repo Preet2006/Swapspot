@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapspot Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: #FFD335;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+  /* z-index: 1000; */
+        }
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+    margin-top: 20px;
+  height: 70px;
+  width: auto;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: start;
+}
+
+.nav-link {
+  margin-right: 40px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
+.profile-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+        /* Container */
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            background-color: #f3f3f3;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgb(235, 255, 53);
+            overflow: hidden;
+        }
+
+        /* Left Section */
+        .left-section {
+            width: 50%;
+            background-color: #FDD835;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            border-top-right-radius: 75px;
+            border-bottom-right-radius: 75px;
+        }
+
+        .left-section h1 {
+            color: #0057B7;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .left-section h2{
+            color: white;
+            font-size: 48px;
+            margin-top: 0%;
+        }
+
+        .left-section p {
+            color: #fff;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 50%; 
+            margin-bottom: 25px;
+            height: auto;
+            /* display: inline-block; 
+            background-color: transparent; */
+        }
+
+        .buttom {
+            width: 80%;
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .buttom:hover{
+        transform: scale(1.2); /* Scale the image to 110% on hover */
+        /* filter: brightness(1.2);  */
+        }
+
+        /* Right Section */
+        .right-section {
+            width: 60%;
+            background-color: #f3f3f3;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1); */
+        }
+
+        .right-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .right-section p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .right-section input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            background: none;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .right-section input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .right-section label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .remember-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .remember-section a {
+            text-decoration: none;
+            color: #037ae9;
+            font-size: 14px;
+        }
+
+        .remember-section a:hover {
+            text-decoration: underline;
+        }
+
+        .new-user p{
+            margin-top: 20px;
+            color: black;
+        }
+
+        .new-user a {
+            color: #037ae9;
+            text-decoration: none;
+        }
+
+        .new-user a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login Button */
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #FDD835;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #fbc02d;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+          <img src="swapspot.png" alt="Logo" class="logo">
+        </div>
+        <div class="navbar-right">
+          <a href="homepage.html" class="nav-link">Home</a>
+          <a href="#" class="nav-link">Explore</a>
+          <a href="#" class="nav-link">Cart</a>
+          <img src="./profile/images.png" alt="Profile" class="profile-icon">
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="swapspot.png" class="logo">
+            <h2>Welcome Back</h2>
+            <p>Swap with the best items with SwapSpot</p>
+            <img src="loginpageimg.jpg" alt="Swapspot Illustration" class="buttom">
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2>LOG IN</h2>
+            <p>Fill up your details</p>
+            <form id="loginForm">
+                <input type="email" name="email" placeholder="Email ID" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <div class="remember-section">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#">Forget Password?</a>
+                </div>
+                
+                <button class="login-btn" type="submit">LOGIN</button>
+                
+                <div class="new-user">
+                    <p class="login">New User? <a href="signuppage.html">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Add this script before the closing </body> tag
+    
+        // Handle form submission
+        async function handleLogin(event) {
+    event.preventDefault(); // Prevent page reload
+
+    const email = document.querySelector('input[name="email"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+
+    try {
+        // Send a POST request to the backend login API
+        const response = await fetch('http://localhost:3000/loginpage', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            // Successful login
+            alert(data.message); // Display success message
+            console.log('User:', data.user); // You can also log the user details to the console
+            // Redirect to another page
+            window.location.href = 'index.html'; // Redirect to a dashboard page or home page
+        } else {
+            // Invalid credentials
+            alert(data.message); // Display error message
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again later.');
+    }
+}
+
+// Attach the handleLogin function to the form's submit event
+document.querySelector('form').onsubmit = handleLogin;
+
+    </script>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5e7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 50px;
+}
+
+.navbar {
+            height: 60px;
+            background-color: #FFD335;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+  /* z-index: 1000; */
+        }
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin-right: 40px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
+.profile-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Contact Form */
+.contact-form {
+    width: 750px;
+    height: 600px;
+}
+
+.contact-form h2 {
+    color: #a15ce4;
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-form button {
+    width: 70%;
+    padding: 10px;
+    background-color: #a15ce4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #8e4cd1;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: center;
+}
+
+.contact-info .contact-image img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.contact-info .contact-details p {
+    color: #666;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.contact-info .social-icons a {
+    color: #fff;
+    background: #a15ce4;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.contact-info .social-icons a:hover {
+    background: #8e4cd1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="navbar">
+            <div class="navbar-left">
+              <img src="swapspot.png" alt="Logo" class="logo">
+            </div>
+            <div class="navbar-right">
+              <a href="homepage.html" class="nav-link">Home</a>
+              <a href="#" class="nav-link">Explore</a>
+              <a href="#" class="nav-link">Cart</a>
+              <img src="./profile/images.png" alt="Profile" class="profile-icon">
+            </div>
+        </nav>
+
+
+        <div class="contact-form">
+            <h2>Get in touch</h2>
+            <p>We are here for you! How can we help?</p>
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div class="contact-info">
+            <div class="contact-image">
+                <img src="https://via.placeholder.com/150" alt="Contact Illustration">
+            </div>
+            <div class="contact-details">
+                <p><i class="fas fa-map-marker-alt"></i> 545 Mavis Island, IL 99191</p>
+                <p><i class="fas fa-phone"></i> +2034 4040 3030</p>
+                <p><i class="fas fa-envelope"></i> hello@gmail.com</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Thank you for contacting us! We'll get back to you soon.");
+});
+
+    </script>
+</body>
+</html>

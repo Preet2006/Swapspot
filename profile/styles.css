@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #FFF7E3; /* Updated to light yellow background */
+}
+
+/* Top Navigation Bar Styles */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #FFD700; /* Updated to yellow border */
+    border-radius: 20px;
+    background: #FFF7E3; /* Updated to light yellow */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    background: #FFF7E3; /* Updated to light yellow */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Adjust container to account for top nav */
+.container {
+    display: flex;
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-right: 1px solid #FFD700; /* Updated to yellow border */
+}
+
+.logo {
+    /* display: flex; */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.logo-icon {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    width: 10px;
+    height: 15px;
+    background: #FFB800; /* Updated to primary yellow */
+    border-radius: 50%;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.nav-item:hover {
+    background: #FFF7E3; /* Updated to light yellow */
+    color: #FFB800; /* Updated to primary yellow */
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Profile Section */
+.profile-section {
+    width: 280px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.profile-name {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #FFB800; /* Updated to primary yellow */
+}
+
+.profile-location {
+    text-align: center;
+    color: #A098AE; /* Kept as is for readability */
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #A098AE; /* Kept as is for readability */
+}
+
+.swap-balance {
+    background: #FFF7E3; /* Updated to light yellow */
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFB800; /* Updated to primary yellow */
+}
+
+/* Form */
+.edit-form {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #FFB800; /* Updated to primary yellow */
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #A098AE; /* Kept as is for readability */
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #FFD700; /* Updated to yellow border */
+    border-radius: 6px;
+}
+
+.save-button {
+    background: #FFB800; /* Updated to primary yellow */
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background: #FFCA0D; /* Updated to hover yellow */
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 280px;
+}
+
+.history-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.view-all {
+    color: #FFCA0D; /* Already using yellow */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Updated Swap History Styles */
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.history-user strong {
+    font-weight: 500;
+    color: #FFB800; /* Updated to primary yellow */
+}
+
+.history-item div:last-child {
+    color: #A098AE; /* Kept as is for readability */
+    font-size: 12px;
+}
+
+.favorite-items {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.favorite-item {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    object-fit: cover;
+}

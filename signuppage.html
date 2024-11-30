@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Swapspot - Create Account</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.navbar {
+            height: 60px;
+            background-color: #FFD335;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+  /* z-index: 1000; */
+        }
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin-right: 40px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
+.profile-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgb(235, 255, 53);
+    /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+}
+
+.left-section {
+    background-color: #FDD835;
+    padding: 40px;
+    width: 50%;
+    text-align: center;
+    border-top-right-radius: 65px;
+    border-bottom-right-radius: 65px;
+    /* box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1); */
+}
+
+.left-section .logo h1 {
+    font-size: 36px;
+    color: #0057B7;
+    margin-bottom: 0%;
+}
+
+.logo1{
+    width: 50%; 
+    right: 30%;
+    margin-bottom: 25px;
+    height: auto;
+    /* display: inline-block; 
+    background-color: transparent; */
+}
+
+.left-section p {
+    /* margin-top: 10px; */
+    font-size: 45px;
+    color: #fffcfc;
+}
+
+.image-section {
+    position: absolute;
+    margin-top: 10px;
+    left: 22%;
+    /* transform: translateX(-20%);
+    z-index: 2;  */
+}
+
+.image-section img {
+    width: 70%; 
+    /* margin-top: 7%; */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.1); 
+    /* filter: brightness(1.2);  */
+}
+
+.right-section {
+    background-color: white;
+    padding: 60px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.create-account{
+    margin-left: 5%;
+}
+
+.create-account h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.social-signup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.google-btn, .facebook-btn {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.google-btn {
+    background-color: #ffffff;
+    color: #444;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ /* .google-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+} */
+
+.google-btn img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.facebook-btn {
+    background-color: #ffffff;
+    color: #444;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.facebook-btn img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.google-btn:hover {
+    background-color: #bebebe;
+}
+
+.facebook-btn:hover {
+    background-color: #b3b3b3;
+}
+
+.or {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #999;
+}
+
+form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.create-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #FDD835;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-btn:hover {
+    background-color: #ddab2b;
+}
+
+.login {
+    text-align: center;
+    margin-top: 20px;
+    color: #141414;
+}
+
+.login a {
+    color: #037ae9;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+    /* color: #122d4b; */
+}
+
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+          <img src="swapspot.png" alt="Logo" class="logo">
+        </div>
+        <div class="navbar-right">
+          <a href="homepage.html" class="nav-link">Home</a>
+          <a href="#" class="nav-link">Explore</a>
+          <a href="#" class="nav-link">Cart</a>
+          <img src="./profile/images.png" alt="Profile" class="profile-icon">
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="left-section">
+            <img src="swapspot.png" class="logo1">
+            <div class="logo">
+                <p>Trade</p>
+                <p>More Buy Less</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="create-account">
+                <h2>Create Account</h2>
+                <div class="social-signup">
+                    <button class="google-btn">
+                        <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="">
+                        Sign up with Google
+                    </button>
+                    <button class="facebook-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/768px-Facebook_icon.svg.png">
+                        Sign up with Facebook
+                    </button>
+                </div>
+                <p class="or">- OR -</p>
+                <form id="signup-form">
+                    <input type="text" name="fullname" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button class="create-btn" type="submit">Create Account</button>
+                </form>
+                <p class="login">Already have an account? <a href="loginpage.html">Log in</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById("signup-form");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                fullname: form.fullname.value,
+                email: form.email.value,
+                password: form.password.value
+            };
+
+            try {
+                const response = await fetch("http://localhost:3000/signuppage.html", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData),
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    alert(result.message);
+                    window.location.href = "loginpage.html";
+                } else {
+                    alert(result.message);
+                }
+            } catch (error) {
+                console.error(error);
+                alert("An error occurred. Please try again.");
+            }
+        });
+    </script>
+
+</body>
+</html>

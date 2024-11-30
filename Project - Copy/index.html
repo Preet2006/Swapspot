@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Submitted Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .data-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .data-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Submitted Data</h1>
+
+    <!-- Display submitted form data -->
+    <div id="dataList">
+        <div id="formDataContainer"></div>
+    </div>
+
+    <script>
+        // Fetch and display form data dynamically
+        function fetchData() {
+            fetch("/form.html") // This route will retrieve the data
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById("formDataContainer");
+                    container.innerHTML = ""; // Clear previous data
+
+                    // Loop through the data and display each item
+                    data.forEach(item => {
+                        const div = document.createElement("div");
+                        div.classList.add("data-item");
+
+                        const imageElement = item.imageUrl ? `<img src="${item.imageUrl}" alt="Image">` : "";
+                        div.innerHTML = `
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                            ${imageElement}
+                        `;
+                        container.appendChild(div);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        }
+
+        // Load data when the page is loaded
+        window.onload = fetchData;
+    </script>
+</body>
+</html>

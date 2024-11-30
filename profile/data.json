@@ -1,0 +1,13 @@
+{
+    "swapHistory": [
+        { "user": "User1", "amount": "50 USD", "date": "2023-11-08" },
+        { "user": "User2", "amount": "120 USD", "date": "2023-11-07" },
+        { "user": "User3", "amount": "200 USD", "date": "2023-11-06" },
+        { "user": "User4", "amount": "75 USD", "date": "2023-11-05" }
+    ],
+    "favorites": [
+        { "title": "Favorite 1", "image": "smartphone.jpg", "description": "Description for favorite 1" },
+        { "title": "Favorite 2", "image": "smartphone.jpg", "description": "Description for favorite 2" },
+        { "title": "Favorite 3", "image": "smartphone.jpg", "description": "Description for favorite 3" }
+    ]
+}

@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FAF8F6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent; 
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 230px;
+    
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* New class for left-aligning nav links */
+.nav-left {
+    display: flex;
+    list-style-type: none;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    margin-right: auto; /* Ensures that the links are aligned to the left */
+}
+
+.nav-left li {
+    margin-right: 20px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF6347;
+}
+
+/* Styles for the other navbar elements like Sign Up button and profile icon */
+.btn-signup {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #FF6347;
+    border: 2px solid #FF6347;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-signup:hover {
+    background-color: #FF6347;
+    color: #fff;
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-left: 50px;
+}
+
+.hero-text h2 {
+    font-size: 4em; 
+    font-weight: bold; 
+    color: #181E4B; 
+    margin: 20px 0; /* Spacing above and below the heading */
+    text-decoration: none; 
+    font-family: 'Volkhov'; 
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin: 22px 0; /* Adds vertical spacing between paragraphs */
+    color: #5E6282;
+}
+
+.hero .gateway-text {
+    color: #df6951; /* Change to your preferred color */
+    font-size: 1.1em; /* Adjust the size */
+    margin: 20px 0; /* Space above and below the text */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.btn-join {
+    padding: 15px 30px;
+    background-color: #FFD700;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-top: 100px; /* Adjust this value to shift the button down */
+    
+
+}
+
+.btn-join:hover {
+    background-color: #FFC107;
+}
+
+.hero-images {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.second-img {
+    max-width: 300px; 
+    width: 100%;
+    height: auto;
+    position: relative; 
+    z-index: 1; 
+    margin-left: 300px; 
+    bottom: 80px;
+    right: 8px;
+}
+
+
+.decore-img {
+    max-width: 600px; 
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 20px;
+    left: 650px; 
+    z-index: -1; 
+}
+
+/* Under Text Image */
+.under-text-image {
+    max-width: 100%; /* Ensures the image is responsive */
+    bottom: 20px;
+    left:180px; /* Position the image at the top */
+    position: relative; /* Required to use top */
+}
+.crafted-text {
+    margin-top: 10px; /* Adjust this value to shift upwards */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    
+}
+
+/* Services Section Styling with Unique Enhancements */
+.service{
+    text-align: center;
+    font-size: 40px;
+    color: #14183E;
+    font-family: 'Volkhov', serif;
+}
+.services {
+    background-color: #FAF8F6;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Custom wave divider for visual effect */
+
+
+/* Services Container with improved grid layout */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Service Item with Interactive Hover Effect */
+.service-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, #FFD700 0%, #FF8C00 50%, #00CED1 100%);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+    transform: rotate(15deg);
+}
+
+/* Text Styling */
+h3 {
+    font-size: 1.5em;
+    color: #181E4B;
+    margin-bottom: 15px;
+    font-family: 'Volkhov', serif;
+}
+
+p {
+    font-size: 1em;
+    color: #5E6282;
+    line-height: 1.6;
+}
+
+/* Overlay Animation on Hover */
+.service-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+    transform: translateY(100%);
+}
+
+.service-item:hover::after {
+    transform: translateY(0);
+}
+
+/* Call-to-action overlay text */
+.service-item:hover h3, 
+.service-item:hover p {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    h3 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+}
+
+/* Custom shape divider at the bottom */
+
+
+
+#bada-icon{
+    height:100px;
+    width: 150px;
+}
+.center-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 40px 0; /* Add spacing above and below the section */
+}
+
+.btn-join-now {
+    position: absolute;
+    right: 630px; /* Adjust the value to control the distance from the right edge */
+    top:  360px;
+    padding: 10px 20px;
+    background-color: #FFCA0D;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.btn-join-now:hover {
+    background-color: #E0B308; /* Darken the button color on hover */
+}
+
+.centered-image {
+    width: 700px; /* Adjust the width as needed */
+    height: 380px; /* Maintain aspect ratio */
+    margin-top: 40px; /* Space between the button and the image */
+}
+/* Swap Steps Section */
+.swap-steps {
+    background-color: #FAF8F6;
+    padding: 60px 0;
+    max-width: 1200px; /* Limit width for better alignment */
+    margin: 0 auto; /* Center the section */
+}
+
+.swap-heading {
+    font-size: 2.5em;
+    color: #14183E;
+    font-family: 'Volkhov', serif;
+    margin-bottom: 40px;
+    text-align: center; /* Center-align heading */
+    font-weight: bold;
+}
+
+.step-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.steps-list {
+    display: flex;
+    flex-direction: column; /* Arrange steps vertically */
+    width: 50%; /* Adjust as needed */
+}
+
+.step-item {
+    display: flex; /* Use flex for icons and text */
+    align-items: center; /* Center icon and text vertically */
+    margin-bottom: 20px; /* Space between steps */
+    padding-bottom: 30px;
+}
+
+.step-icon {
+    margin-right: 15px; /* Space between icon and text */
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+
+.step {
+    width: 500px; /* Keep the same width as before */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: -120px; /* Move image higher */
+    margin-left: 50px; /* Adjust margin to bring the image more to the right */
+}
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Testimonials Section */
+/* Testimonials Section */
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 0;
+    background-color: #F9F9FB;
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-between; /* Space between heading and box */
+    width: 80%;
+    margin: 0 auto;
+}
+
+.testimonial-heading-container {
+    flex: 1;
+    text-align: left;
+    padding-left: 150px; /* Increased padding to shift heading further right */
+}
+
+.testimonial-heading {
+    font-size: 2.5em;
+    color: #14183E;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 180px; /* Increased padding to shift heading further right */
+}
+
+.testimonial-slider {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align box to the right */
+    align-items: center;
+    position: relative;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 30px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    margin-left: 150px; /* Increased margin for the box */
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    right: 270px;
+}
+
+.testimonial-card.active {
+    opacity: 1;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.testimonial-user {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    color: #181E4B;
+    margin: 0;
+}
+
+.testimonial-location {
+    font-size: 0.9em;
+    color: #717C99;
+}
+
+.testimonial-quote {
+    font-size: 1em;
+    color: #5E6282;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+
+
+/* Subscription Section */
+.subscription {
+    background-color: #F4F4FB;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.subscription-content {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.subscription-text {
+    font-size: 1.2em;
+    color: #14183E;
+    margin-bottom: 20px;
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-input {
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    width: 350px;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.subscribe-button {
+    padding: 15px 30px;
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #FF5A4D;
+}
+
+/* Additional Styling */
+@media (max-width: 768px) {
+    .testimonial-card {
+        max-width: 300px;
+        padding: 20px;
+    }
+
+    .email-input {
+        width: 250px;
+    }
+}
+.footer {
+    background-color: #FAF8F6; /* Match your background */
+    padding: 40px 20px; /* Padding around the footer */
+    text-align: center; /* Center text */
+    color: #5E6282; /* Text color */
+}
+
+.footer-content {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space out the columns */
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1200px; /* Limit the max width */
+    margin: 0 auto; /* Center the footer */
+}
+
+.footer-logo {
+    flex: 1; /* Allow the logo to take up space */
+}
+
+.footer-logo-img {
+    max-width: 220px; /* Adjust the logo size */
+}
+
+.footer-links, .footer-social {
+    flex: 1; /* Equal space for links and social */
+    margin-left: 20px; /* Space between columns */
+}
+
+.footer-links h3, .footer-social h3 {
+    font-size: 1.5em; /* Header size */
+    color: #14183E; /* Dark color for headers */
+    margin-bottom: 15px; /* Space below headers */
+}
+
+.footer-links ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links li {
+    margin-bottom: 10px; /* Space between links */
+}
+
+.footer-links a {
+    text-decoration: none; /* No underline */
+    color: #5E6282; /* Text color */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.footer-links a:hover {
+    color: #FF6347; /* Change color on hover */
+}
+
+.footer-social {
+    text-align: left; /* Left-align social icons */
+}
+
+.social-icons {
+    display: flex; /* Flexbox for icons */
+    gap: 15px; /* Space between icons */
+}
+
+.social-icons img {
+    width: 25px; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.footer-bottom {
+    margin-top: 30px; /* Space above copyright text */
+    font-size: 0.9em; /* Smaller font size */
+    color: #717C99; /* Lighter text color */
+}
