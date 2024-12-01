@@ -21,16 +21,16 @@
         <div>
             <ul>
                 <li class="list-item">
-                    <a href="#home" class="button-link">
+                    <a href="/Swapspot/index.html" class="button-link">
                         <div class="box"><img src="./ima/home_logo.png" alt="Home Logo">Home</div>
                     </a>
-                    <a href="#explore" class="button-link">
+                    <a href="/Swapspot/Project - Copy/item_listing.html" class="button-link">
                         <div class="box"><img src="./ima/exploer_logo.png" alt="Explore Logo">Explore</div>
                     </a>
-                    <a href="#favorite" class="button-link">
+                    <!-- <a href="#favorite" class="button-link">
                         <div class="box"><img src="./ima/Favorite_logo.png" alt="Favorite Logo">Favorite</div>
-                    </a>
-                    <a href="#message" class="button-link">
+                    </a> -->
+                    <a href="/Swapspot/message/index1.html" class="button-link">
                         <div class="box"><img src="./ima/Favorite_logo.png" alt="Message Logo">Message</div>
                     </a>
                     <a href="#order-history" class="button-link">
@@ -60,7 +60,7 @@
     <div class="right">
         <div class="logos-slider">
             <div class="logos">
-                <a href="#message" class="button-link">
+                <a href="/Swapspot/message/index1.html" class="button-link">
                     <img src="./ima/Message 2.png" alt="Message Logo" style="height: 35px; width: 37px;">
                 </a>
                 <a href="#notification" class="button-link">
@@ -69,7 +69,7 @@
                 <a href="#settings" class="button-link">
                     <img src="./ima/Setting.png" alt="Settings Logo" style="height: 35px; width: 37px;">
                 </a>
-                <a href="#profile" class="button-link">
+                <a href="/Swapspot/profile/index2.html" class="button-link">
                     <img src="./ima/placeholder.png" alt="Profile Placeholder" style="margin-left: 25px; margin-left: 45px; padding: 0px;">
                 </a>
             </div>
@@ -89,8 +89,8 @@
                 </div>
 
                 <div class="balance-actions">
-                    <button class="image-button" onclick="alert('Button Clicked!')"><img src="/ima/Income.png" alt="Button Image"></button>
-                    <button class="image-button" onclick="alert('Button Clicked!')"><img src="/ima/Profit.png" alt="Button Image"></button>
+                    <button class="image-button" onclick="alert('Button Clicked!')"><img src="/Swapspot/Project - Copy/ima/Income.png" alt="Button Image"></button>
+                    <button class="image-button" onclick="alert('Button Clicked!')"><img src="/Swapspot/Project - Copy/ima/Profit.png" alt="Button Image"></button>
 
                     <div class="balance-actions1">
                         <h4>Top Up</h4>
@@ -104,7 +104,7 @@
             <div class="address-section">
                 <h4>Your Address</h4>
                 <div class="address">
-                    <span><img src="/ima/location logo.png"> Street, 23</span>
+                    <span><img src="/Swapspot/Project - Copy/ima/location logo.png"> Street, 23</span>
                     <button>Change</button>
                 </div>
             </div>
@@ -147,7 +147,9 @@
                         Have a coupon code?
                     </button>
                 </div>
+                <a href="/Swapspot/shippingdetails.html" class="button-link">
                 <button class="checkout-btn">Checkout</button>
+                </a>
             </div>
             
     </div>
@@ -281,6 +283,8 @@
     <script src="cart.js"></script>
     <script>
         // Fetch popular swap items from the server
+
+        
         async function loadPopularSwaps() {
             try {
                 const response = await fetch('http://localhost:3000/getFormData'); // API endpoint to get data

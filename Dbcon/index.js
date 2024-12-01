@@ -19,10 +19,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage }); // Initialize Multer
 
-app.use(express.static('C:\\Users\\abc\\Desktop\\web_\\webproject'));
+app.use(express.static('C:\\Users\\abc\\Desktop\\web_\\Swapspot'));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join('C:\\Users\\abc\\Desktop\\web_\\webproject', 'index.html'));
+    res.sendFile(path.join('C:\\Users\\abc\\Desktop\\web_\\Swapspot', 'index.html'));
 });
 
 let dbconnect = require("./connectdb/connect.js");
