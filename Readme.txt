@@ -1,4 +1,4 @@
-# Swapot
+# Swaspot
 
 **Swaspot** is a web platform that allows users to easily swap items within their local community.
 
